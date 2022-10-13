@@ -3,8 +3,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 });
 
-const COLLEGE_LIST_API_URL =
-  "http://universities.hipolabs.com/search?country=India";
+const COLLEGE_LIST_API_URL = "https://rh-proxy.herokuapp.com/colleges";
 const AllLettersRegex = /^^[a-zA-Z ]*$/;
 const mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -97,7 +96,7 @@ function openSubmitModal() {
 }
 
 async function getAndAppendCollegeList() {
-  const response = await fetch(COLLEGE_LIST_API_URL, {mode: 'cors'});
+  const response = await fetch(COLLEGE_LIST_API_URL);
   const collegeList = await response.json();
 
   collegeList.forEach((c) => {
