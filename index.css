@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+input,
+select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="radio"] {
+  display: inline;
+  margin: 0 2rem 0 1rem;
+}
+
+input[type="submit"] {
+  padding: 6px 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: fit-content;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+tr {
+  margin: 0.5rem 0;
+}
+td {
+  padding-left: 0.5rem;
+}
+
+#college_select_list {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/assets/caret-down.svg") no-repeat 97% 50%;
+}
+
+#header {
+  background-color: black;
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+#header .header-inner {
+  margin: auto;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+#registration-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem 8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.form-input {
+  width: 50%;
+  font-weight: 600;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.form-input .skills-input {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.form-input .skills-input label {
+  width: 20%;
+}
+
+.form-input .skills-input input[type="range"] {
+  width: 80%;
+  padding: 1rem 0;
+}
+
+.form-btns-container {
+  width: 100%;
+  display: flex;
+}
+
+.form-btns-container div {
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#submit-btn {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+}
+
+#submit-btn:hover {
+  background-color: #004080;
+}
+
+#clear-btn {
+  background-color: white;
+  color: #0066cc;
+  border: 1px solid #0066cc;
+}
+
+#clear-btn:hover {
+  background-color: #0066cc;
+  color: white;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  z-index: 999;
+  display: none;
+}
+
+#modal {
+  width: fit-content;
+  background-color: white;
+  opacity: 1;
+  margin: auto;
+  padding: 2rem 6rem;
+  border-radius: 5px;
+}

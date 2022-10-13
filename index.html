@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Red+Hat+Text&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Form Validation</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <img src="assets/Untitled.svg" alt="RedHat" />
+      <span class="header-inner">Apprenticeship Registration Form</span>
+    </div>
+
+    <form
+      id="registration-form"
+      action="#"
+      onsubmit="return submitAction(this)"
+    >
+      <div class="form-input">
+        <label for="first_name">
+          First Name <span style="color: red">*</span>
+        </label>
+        <input type="text" id="first_name" class="width-full" required />
+      </div>
+
+      <div class="form-input">
+        <label for="last_name">Last Name </label>
+        <input type="text" id="last_name" class="width-full" />
+      </div>
+
+      <div class="form-input">
+        <label for="email">Email <span style="color: red">*</span></label>
+        <input type="email" id="email" class="width-full" required />
+      </div>
+
+      <div class="form-input">
+        <label for="mobile">
+          Mobile Number <span style="color: red">*</span>
+        </label>
+        <input type="number" id="mobile" class="width-full" required />
+      </div>
+
+      <div class="form-input">
+        <label for="current_location">
+          Current Location <span style="color: red">*</span>
+        </label>
+        <input type="text" id="current_location" class="width-full" required />
+      </div>
+
+      <div class="form-input">
+        <div style="border-bottom: 2px dashed; width: fit-content">
+          Gender <span style="color: red">*</span>
+        </div>
+        <br />
+        <div style="margin-left: 2rem">
+          <label for="male">Male</label>
+          <input type="radio" id="male" name="gender" value="male" checked />
+
+          <label for="female">Female</label>
+          <input type="radio" id="female" name="gender" value="female" />
+        </div>
+      </div>
+
+      <div class="form-input">
+        <label for="college_select_list">
+          College / University <span style="color: red">*</span>
+        </label>
+        <select
+          name="college"
+          id="college_select_list"
+          class="width-full"
+          required
+        >
+          <option value="" selected>Select your college</option>
+        </select>
+      </div>
+
+      <div class="form-input">
+        <label for="dob">
+          Date Of Birth <span style="color: red">*</span>
+        </label>
+        <input type="date" id="dob" required />
+      </div>
+
+      <div class="form-input">
+        <div style="border-bottom: 2px dashed; width: fit-content">
+          Skills Bar
+        </div>
+
+        <div class="skills-input">
+          <label for="html">HTML</label>
+          <input type="range" id="html" name="lang_html" step="10" />
+        </div>
+
+        <div class="skills-input">
+          <label for="css">CSS</label>
+          <input type="range" id="css" name="lang_css" step="10" />
+        </div>
+
+        <div class="skills-input">
+          <label for="js">Javascript</label>
+          <input type="range" id="js" name="lang_js" step="10" />
+        </div>
+      </div>
+
+      <div class="form-btns-container">
+        <div style="margin: 0 auto">
+          <input type="submit" id="submit-btn" value="Submit" />
+          <input type="reset" id="clear-btn" value="Clear"/ >
+        </div>
+      </div>
+    </form>
+
+    <!-- show form data in modal after successfull registration -->
+    <div id="overlay">
+      <div id="modal">
+        <h2>You have registered successfully !</h2>
+        <table id="submit_data_values">
+          <tr>
+            <td><b>Name</b></td>
+            <td id="final_name"></td>
+          </tr>
+          <tr>
+            <td><b>Gender</b></td>
+            <td id="final_gender"></td>
+          </tr>
+          <tr>
+            <td><b>Date of Birth</b></td>
+            <td id="final_dob"></td>
+          </tr>
+          <tr>
+            <td><b>Email</b></td>
+            <td id="final_email">hello@g</td>
+          </tr>
+          <tr>
+            <td><b>Mobile</b></td>
+            <td id="final_mobile"></td>
+          </tr>
+          <tr>
+            <td><b>Current Location</b></td>
+            <td id="final_location"></td>
+          </tr>
+          <tr>
+            <td><b>Skills</b></td>
+            <td id="final_skills"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="index.js" type="text/javascript"></script>
+</html>
