@@ -97,7 +97,7 @@ function openSubmitModal() {
 }
 
 async function getAndAppendCollegeList() {
-  const response = await fetch(COLLEGE_LIST_API_URL);
+  const response = await fetch(COLLEGE_LIST_API_URL, {mode: 'cors'});
   const collegeList = await response.json();
 
   collegeList.forEach((c) => {
